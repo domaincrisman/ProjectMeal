@@ -5,31 +5,34 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: mysql2
-  database: projectmeal_dev
-  username: root
-  password: admin
-  host: localhost
-  port: 3306
+  #adapter: mysql2
+  #database: projectmeal_dev
+  #host: localhost
+  #username: root
+  #password: "admin"
+  #port: 3306
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
 
 development:
   <<: *default
-  database: projectmeal_dev
-
+  #database: projectmeal_dev
+  database: db/development.sqlite3
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: projectmeal_test
-
+  #database: projectmeal_test
+  database: db/test.sqlite3
 production:
   <<: *default
-  adapter: mysql2
-  enconding: utf8
-  database: <%= ENV['RDS_DB_NAME'] %>
-  username: <%= ENV['RDS_USERNAME'] %>
-  password: <%= ENV['RDS_PASSWORD'] %>
-  host: <%= ENV['RDS_HOSTNAME'] %>
-  port: <%= ENV['RDS_PORT'] %>
+  #adapter: mysql2
+  #enconding: utf8
+  #database: <%= ENV['RDS_DB_NAME'] %>
+  #username: <%= ENV['RDS_USERNAME'] %>
+  #password: <%= ENV['RDS_PASSWORD'] %>
+  #host: <%= ENV['RDS_HOSTNAME'] %>
+  #port: <%= ENV['RDS_PORT'] %>
   database: db/production.sqlite3

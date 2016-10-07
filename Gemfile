@@ -5,6 +5,7 @@ ruby '2.1.5'
 gem 'rails', '4.2.0'
 
 group :development,:test do
+  gem 'sqlite3'
   gem 'rspec-rails'
   gem 'rspec-its'
   gem 'simplecov', :require => false
@@ -27,7 +28,7 @@ group :test do
   gem 'launchy'
 end
 
-gem 'mysql2', '~>0.3.18'
+#gem 'mysql2', '~>0.3.18'
 gem 'bootstrap-sass'
 gem 'sprockets', '2.11.0'
 gem 'bcrypt-ruby', '3.1.2'
