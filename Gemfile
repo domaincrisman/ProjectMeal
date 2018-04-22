@@ -31,7 +31,8 @@ end
 
 #gem 'mysql2', '~>0.3.18'
 gem 'bootstrap-sass'
-gem 'sprockets', '2.11.0'
+#gem 'sprockets', '2.11.0'
+gem 'sprockets', '~> 2.11', '>= 2.11.3'
 gem 'bcrypt-ruby', '3.1.2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
